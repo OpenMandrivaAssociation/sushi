@@ -1,20 +1,20 @@
-%define	api		1.0
+%define url_ver	%(echo %{version}|cut -d. -f1,2)
+
+%define	api	1.0
 %define	major	0
 %define gmajor	1.0
 %define	libname		%mklibname %{name} %{api} %{major}
 %define	girname		%mklibname %{name}-gir %{gmajor}
 %define	develname	%mklibname -d %{name} %{api}
 
-%define url_ver	%(echo %{version}|cut -d. -f1,2)
-
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
 Version:	0.4.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		File tools
 Url:		http://www.gnome.org/
-Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	http://download.gnome.org/sources/sushi/%{url_ver}/%{name}-%{version}.tar.xz
 Patch0:		sushi-0.3.91-linking.patch
 
 #for gnome-autogen
@@ -56,7 +56,6 @@ Runtime libraries for %{name}.
 %package -n %{girname}
 Summary:	GObject introspection interface for %{name}
 Group:		System/Libraries
-Requires:	%{libname} = %{version}-%{release}
 
 %description -n %{girname}
 GObject introspection interface for %{name}.
@@ -65,6 +64,7 @@ GObject introspection interface for %{name}.
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
+Requires:	%{girname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 
 %description -n %{develname}
@@ -81,7 +81,7 @@ NOCONFIGURE=1 gnome-autogen.sh
 %make
 
 %install
-%make_install
+%makeinstall_std
 find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %find_lang %{name}
 
