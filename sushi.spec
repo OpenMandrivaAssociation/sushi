@@ -9,8 +9,8 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	0.4.0
-Release:	2
+Version:	0.4.1
+Release:	1
 License:	GPLv2+
 Group:		File tools
 Url:		http://www.gnome.org/
