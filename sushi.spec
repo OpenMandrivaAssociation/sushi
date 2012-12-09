@@ -9,13 +9,12 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	0.4.1
+Version:	3.6.1
 Release:	1
 License:	GPLv2+
 Group:		File tools
 Url:		http://www.gnome.org/
-Source0:	http://download.gnome.org/sources/sushi/%{url_ver}/%{name}-%{version}.tar.xz
-Patch0:		sushi-0.3.91-linking.patch
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/sushi/%{url_ver}/%{name}-%{version}.tar.xz
 
 #for gnome-autogen
 BuildRequires:	gnome-common
@@ -23,7 +22,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	intltool
 BuildRequires:	unoconv
 BuildRequires:	pkgconfig(clutter-1.0)
-BuildRequires:	pkgconfig(clutter-gst-1.0)
+BuildRequires:	pkgconfig(clutter-gst-2.0)
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(evince-document-3.0)
 BuildRequires:	pkgconfig(evince-view-3.0)
@@ -36,7 +35,7 @@ BuildRequires:	pkgconfig(gstreamer-pbutils-0.10)
 BuildRequires:	pkgconfig(gstreamer-tag-0.10)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
-BuildRequires:	pkgconfig(libmusicbrainz3)
+BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(webkitgtk-3.0)
 Suggests:	nautilus
 
@@ -73,7 +72,7 @@ applications that use sushi.
 
 %prep
 %setup -q
-%apply_patches
+#apply_patches
 
 %build
 NOCONFIGURE=1 gnome-autogen.sh
@@ -90,15 +89,15 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_bindir}/sushi
 %{_libexecdir}/sushi-start
 %{_datadir}/dbus-1/services/org.gnome.Sushi.service
-%{_datadir}/sushi/
+%{_datadir}/glib-2.0/schemas/org.gnome.sushi.gschema.xml
+%{_datadir}/sushi/js
+%{_datadir}/sushi/style
 
 %files -n %{libname}
-%{_libdir}/libsushi-%{api}.so.%{major}*
+%{_libdir}/%{name}/libsushi-%{api}.so
 
 %files -n %{girname}
-%{_libdir}/girepository-1.0/Sushi-%{gmajor}.typelib
+%{_libdir}/%{name}/girepository-1.0/Sushi-%{gmajor}.typelib
 
 %files -n %{develname}
-%{_libdir}/libsushi-%{api}.so
-%{_datadir}/gir-1.0/Sushi-%{gmajor}.gir
-
+%{_datadir}/%{name}/gir-1.0/Sushi-%{gmajor}.gir
