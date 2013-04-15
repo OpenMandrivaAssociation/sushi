@@ -72,6 +72,7 @@ applications that use sushi.
 
 %prep
 %setup -q
+sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac
 #apply_patches
 
 %build
