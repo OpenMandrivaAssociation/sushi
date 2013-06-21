@@ -37,7 +37,6 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(webkitgtk-3.0)
-BuildConflicts:	libreoffice-core
 Suggests:	nautilus
 
 %description
