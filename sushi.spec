@@ -3,9 +3,9 @@
 %define	api	1.0
 %define	major	0
 %define gmajor	1.0
-%define	libname		%mklibname %{name} %{api} %{major}
-%define	girname		%mklibname %{name}-gir %{gmajor}
-%define	develname	%mklibname -d %{name} %{api}
+%define	libname	%mklibname %{name} %{api} %{major}
+%define	girname	%mklibname %{name}-gir %{gmajor}
+%define	devname	%mklibname -d %{name} %{api}
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
@@ -37,6 +37,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(webkitgtk-3.0)
+BuildConflicts:	libreoffice-core
 Suggests:	nautilus
 
 %description
@@ -59,30 +60,29 @@ Group:		System/Libraries
 %description -n %{girname}
 GObject introspection interface for %{name}.
 
-%package -n %{develname}
+%package -n %{devname}
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{girname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 
-%description -n %{develname}
+%description -n %{devname}
 The sushi-devel package contains libraries and header files for developing
 applications that use sushi.
 
 %prep
 %setup -q
 sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac
-#apply_patches
+%apply_patches
+NOCONFIGURE=1 gnome-autogen.sh
 
 %build
-NOCONFIGURE=1 gnome-autogen.sh
 %configure2_5x
 %make
 
 %install
 %makeinstall_std
-find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %find_lang %{name}
 
 %files -f %{name}.lang
@@ -100,5 +100,6 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %files -n %{girname}
 %{_libdir}/%{name}/girepository-1.0/Sushi-%{gmajor}.typelib
 
-%files -n %{develname}
+%files -n %{devname}
 %{_datadir}/%{name}/gir-1.0/Sushi-%{gmajor}.gir
+
