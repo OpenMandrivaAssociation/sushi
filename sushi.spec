@@ -9,8 +9,8 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	3.6.1
-Release:	7
+Version:	3.12.0
+Release:	1
 License:	GPLv2+
 Group:		File tools
 Url:		http://www.gnome.org/
@@ -27,7 +27,6 @@ BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(evince-document-3.0)
 BuildRequires:	pkgconfig(evince-view-3.0)
 BuildRequires:	pkgconfig(gjs-1.0)
-BuildRequires:	pkgconfig(gjs-dbus-1.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gstreamer-0.10)
@@ -72,12 +71,10 @@ applications that use sushi.
 
 %prep
 %setup -q
-sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac
 %apply_patches
-NOCONFIGURE=1 gnome-autogen.sh
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
