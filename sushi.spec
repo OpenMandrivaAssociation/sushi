@@ -9,7 +9,7 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	3.12.0
+Version:	 3.15.90
 Release:	2
 License:	GPLv2+
 Group:		File tools
