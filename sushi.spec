@@ -20,7 +20,6 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/sushi/%{url_ver}/%{name}-%{versi
 BuildRequires:	gnome-common
 BuildRequires:	gettext-devel
 BuildRequires:	intltool
-BuildRequires:	unoconv
 BuildRequires:	pkgconfig(clutter-1.0)
 BuildRequires:	pkgconfig(clutter-gst-2.0)
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
@@ -29,9 +28,9 @@ BuildRequires:	pkgconfig(evince-view-3.0)
 BuildRequires:	pkgconfig(gjs-1.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
-BuildRequires:	pkgconfig(gstreamer-0.10)
-BuildRequires:	pkgconfig(gstreamer-pbutils-0.10)
-BuildRequires:	pkgconfig(gstreamer-tag-0.10)
+BuildRequires:	pkgconfig(gstreamer-1.0)
+BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
+BuildRequires:	pkgconfig(gstreamer-tag-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libmusicbrainz5)
