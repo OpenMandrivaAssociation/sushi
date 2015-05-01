@@ -9,12 +9,12 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	 3.15.90
+Version:	3.15.90
 Release:	2
 License:	GPLv2+
 Group:		File tools
 Url:		http://www.gnome.org/
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/sushi/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/sushi/%{url_ver}/%{name}-%{version}.tar.xz
 
 #for gnome-autogen
 BuildRequires:	gnome-common
@@ -35,7 +35,7 @@ BuildRequires:	pkgconfig(gstreamer-tag-0.10)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libmusicbrainz5)
-BuildRequires:	pkgconfig(webkitgtk-3.0)
+BuildRequires:	pkgconfig(webkit2gtk-4.0)
 Suggests:	nautilus
 
 %description
