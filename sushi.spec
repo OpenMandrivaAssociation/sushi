@@ -85,9 +85,7 @@ applications that use sushi.
 %{_bindir}/sushi
 %{_libexecdir}/sushi-start
 %{_datadir}/dbus-1/services/org.gnome.Sushi.service
-%{_datadir}/glib-2.0/schemas/org.gnome.sushi.gschema.xml
 %{_datadir}/sushi/js
-%{_datadir}/sushi/style
 
 %files -n %{libname}
 %{_libdir}/%{name}/libsushi-%{api}.so
