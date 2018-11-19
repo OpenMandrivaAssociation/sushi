@@ -23,6 +23,7 @@ BuildRequires:	intltool
 BuildRequires:	unoconv
 BuildRequires:	pkgconfig(clutter-1.0)
 BuildRequires:	pkgconfig(clutter-gst-2.0)
+BuildRequires:	pkgconfig(clutter-gst-3.0)
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(evince-document-3.0)
 BuildRequires:	pkgconfig(evince-view-3.0)
