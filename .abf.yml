@@ -2,5 +2,6 @@ removed_sources:
   sushi-3.12.0.tar.xz: 0eea89674b63b6a8347333686ce0679ae7a30c75
   sushi-3.15.90.tar.xz: e527227ec1a4abaca5eef94fdc713f287ac5ddd2
   sushi-3.6.1.tar.xz: cb0075d4df825bd148a26d2ac912eb495d85b14c
-sources:
   sushi-3.18.0.tar.xz: 3b2675cba626e56ae7bfec766167cd065832bc78
+sources:
+  sushi-3.30.0.tar.xz: 1508568c30b236cc2d39e57ee71449455521e369
