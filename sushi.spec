@@ -86,7 +86,7 @@ applications that use sushi.
 %doc AUTHORS COPYING NEWS README
 %{_bindir}/sushi
 %{_libexecdir}/sushi-start
-%{_datadir}/dbus-1/services/org.gnome.Sushi.service
+%{_datadir}/dbus-1/services/org.gnome.NautilusPreviewer.service
 %{_datadir}/sushi/js
 
 %files -n %{libname}
