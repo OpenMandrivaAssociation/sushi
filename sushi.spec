@@ -9,8 +9,8 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	3.18.0
-Release:	4
+Version:	3.30.0
+Release:	1
 License:	GPLv2+
 Group:		File tools
 Url:		http://www.gnome.org/
@@ -20,6 +20,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/sushi/%{url_ver}/%{name}-%{versi
 BuildRequires:	gnome-common
 BuildRequires:	gettext-devel
 BuildRequires:	intltool
+BuildRequires:	unoconv
 BuildRequires:	pkgconfig(clutter-1.0)
 BuildRequires:	pkgconfig(clutter-gst-2.0)
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
@@ -35,7 +36,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
-Suggests:	nautilus
+Requires:	nautilus
 
 %description
 Sushi is a quick previewer for Nautilus, the GNOME desktop file manager.
