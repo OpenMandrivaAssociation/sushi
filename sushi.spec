@@ -9,7 +9,7 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	3.30.0
+Version:	3.32.1
 Release:	1
 License:	GPLv2+
 Group:		File tools
@@ -17,6 +17,7 @@ Url:		http://www.gnome.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/sushi/%{url_ver}/%{name}-%{version}.tar.xz
 
 #for gnome-autogen
+BuildRequires:  meson
 BuildRequires:	gnome-common
 BuildRequires:	gettext-devel
 BuildRequires:	intltool
@@ -75,11 +76,12 @@ applications that use sushi.
 %apply_patches
 
 %build
-%configure
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
+
 %find_lang %{name}
 
 %files -f %{name}.lang
