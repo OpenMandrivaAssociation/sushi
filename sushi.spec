@@ -36,6 +36,7 @@ BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
 BuildRequires:	pkgconfig(gstreamer-tag-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
+BuildRequires:  pkgconfig(gtksourceview-4)a
 BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
 Requires:	nautilus
