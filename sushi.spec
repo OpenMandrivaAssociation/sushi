@@ -89,9 +89,12 @@ applications that use sushi.
 %files -f %{name}.lang
 %doc AUTHORS COPYING NEWS README
 %{_bindir}/sushi
-#{_libexecdir}/sushi-start
+%{_libexecdir}//org.gnome.NautilusPreviewer
 %{_datadir}/dbus-1/services/org.gnome.NautilusPreviewer.service
-#{_datadir}/sushi/js
+%{_datadir}/metainfo/org.gnome.NautilusPreviewer.appdata.xml
+%{_datadir}/sushi/gtksourceview-4/styles/builder-dark.style-scheme.xml
+%{_datadir}/sushi/org.gnome.NautilusPreviewer.data.gresource
+%{_datadir}/sushi/org.gnome.NautilusPreviewer.src.gresource
 
 %files -n %{libname}
 %{_libdir}/%{name}/libsushi-%{api}.so
