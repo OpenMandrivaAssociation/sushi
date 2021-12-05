@@ -9,7 +9,7 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	3.38.1
+Version:	41.0
 Release:	1
 License:	GPLv2+
 Group:		File tools
@@ -50,7 +50,7 @@ Summary:	Runtime libraries for %{name}
 Group:		System/Libraries
 # When built with unoconv support, the library will use unoconv to
 # read LibreOffice files
-Suggests:	unoconv
+Recommends:	unoconv
 
 %description -n %{libname}
 Runtime libraries for %{name}.
