@@ -9,7 +9,7 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	42.0
+Version:	43.0
 Release:	1
 License:	GPLv2+
 Group:		File tools
@@ -39,7 +39,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:  pkgconfig(gtksourceview-4)
 BuildRequires:	pkgconfig(libmusicbrainz5)
-BuildRequires:	pkgconfig(webkit2gtk-4.0)
+BuildRequires:	pkgconfig(webkit2gtk-4.1)
 Requires:	nautilus
 
 %description
