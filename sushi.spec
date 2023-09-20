@@ -9,12 +9,12 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	44.2
+Version:	45.0
 Release:	1
 License:	GPLv2+
 Group:		File tools
-Url:		http://www.gnome.org/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/sushi/%{url_ver}/%{name}-%{version}.tar.xz
+Url:		https://www.gnome.org/
+Source0:	https://ftp.gnome.org/pub/GNOME/sources/sushi/%{url_ver}/%{name}-%{version}.tar.xz
 
 #for gnome-autogen
 BuildRequires:  gjs
