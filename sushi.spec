@@ -78,7 +78,9 @@ applications that use sushi.
 %autopatch -p1
 
 %build
-%meson
+%meson  \
+        -DX11=enabled \
+        -Dwayland=enabled
 %meson_build
 
 %install
@@ -87,7 +89,7 @@ applications that use sushi.
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS COPYING NEWS README
+%doc AUTHORS COPYING NEWS README*
 %{_bindir}/sushi
 %{_libexecdir}//org.gnome.NautilusPreviewer
 %{_datadir}/dbus-1/services/org.gnome.NautilusPreviewer.service
