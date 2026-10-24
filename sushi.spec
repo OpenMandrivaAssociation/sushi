@@ -23,26 +23,23 @@ BuildRequires:	gnome-common
 BuildRequires:	gettext-devel
 BuildRequires:	intltool
 BuildRequires:	unoconv
-BuildRequires:	pkgconfig(clutter-1.0)
-BuildRequires:	pkgconfig(clutter-gst-2.0)
-BuildRequires:	pkgconfig(clutter-gst-3.0)
-BuildRequires:	pkgconfig(clutter-gtk-1.0)
-BuildRequires:	pkgconfig(evince-document-4.0)
-BuildRequires:	pkgconfig(evince-view-4.0)
+BuildRequires:	pkgconfig(blueprint-compiler)
+BuildRequires:	pkgconfig(glycin-gtk4-2)
 BuildRequires:	pkgconfig(gjs-1.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
 BuildRequires:	pkgconfig(gstreamer-tag-1.0)
-BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:	pkgconfig(gtksourceview-3.0)
-BuildRequires:  pkgconfig(gtksourceview-4)
+BuildRequires:  pkgconfig(gtk4)            
+BuildRequires:  pkgconfig(gtksourceview-5)            
+BuildRequires:  pkgconfig(papers-document-4.0)            
+BuildRequires:  pkgconfig(webkitgtk-6.0)
 BuildRequires:	pkgconfig(libmusicbrainz5)
 BuildRequires:	pkgconfig(webkit2gtk-4.1)
 Requires:	nautilus
 # Requires or sushi crashing at launch
-Requires:       %{_lib}gtksourceview-gir4
+Requires:       %{_lib}gtksourceview-gir5
 
 %description
 Sushi is a quick previewer for Nautilus, the GNOME desktop file manager.
@@ -95,7 +92,7 @@ applications that use sushi.
 %{_bindir}/sushi
 %{_libexecdir}//org.gnome.NautilusPreviewer
 %{_datadir}/dbus-1/services/org.gnome.NautilusPreviewer.service
-%{_datadir}/metainfo/org.gnome.NautilusPreviewer.appdata.xml
+%{_datadir}/metainfo/org.gnome.NautilusPreviewer.metainfo.xml
 %{_datadir}/sushi/gtksourceview-4/styles/builder-dark.style-scheme.xml
 %{_datadir}/sushi/org.gnome.NautilusPreviewer.data.gresource
 %{_datadir}/sushi/org.gnome.NautilusPreviewer.src.gresource
