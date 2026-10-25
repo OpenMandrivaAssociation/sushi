@@ -9,8 +9,8 @@
 
 Summary:	Quick Previewer for Nautilus
 Name:		sushi
-Version:	46.0
-Release:	6
+Version:	51.2
+Release:	1
 License:	GPLv2+
 Group:		File tools
 Url:		https://gitlab.gnome.org/GNOME/sushi
