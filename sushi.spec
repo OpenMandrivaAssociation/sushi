@@ -93,7 +93,6 @@ applications that use sushi.
 %{_libexecdir}//org.gnome.NautilusPreviewer
 %{_datadir}/dbus-1/services/org.gnome.NautilusPreviewer.service
 %{_datadir}/metainfo/org.gnome.NautilusPreviewer.metainfo.xml
-%{_datadir}/sushi/gtksourceview-4/styles/builder-dark.style-scheme.xml
 %{_datadir}/sushi/org.gnome.NautilusPreviewer.data.gresource
 %{_datadir}/sushi/org.gnome.NautilusPreviewer.src.gresource
 
