@@ -36,7 +36,6 @@ BuildRequires:  pkgconfig(gtksourceview-5)
 BuildRequires:  pkgconfig(papers-document-4.0)            
 BuildRequires:  pkgconfig(webkitgtk-6.0)
 BuildRequires:	pkgconfig(libmusicbrainz5)
-BuildRequires:	pkgconfig(webkit2gtk-4.1)
 Requires:	nautilus
 # Requires or sushi crashing at launch
 Requires:       %{_lib}gtksourceview-gir5
@@ -73,8 +72,7 @@ The sushi-devel package contains libraries and header files for developing
 applications that use sushi.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 %meson  \
@@ -95,9 +93,12 @@ applications that use sushi.
 %{_datadir}/metainfo/org.gnome.NautilusPreviewer.metainfo.xml
 %{_datadir}/sushi/org.gnome.NautilusPreviewer.data.gresource
 %{_datadir}/sushi/org.gnome.NautilusPreviewer.src.gresource
+%{_datadir}/applications/org.gnome.NautilusPreviewer.desktop
+%{_datadir}/icons/hicolor/scalable/apps/org.gnome.NautilusPreviewer.svg
 
 %files -n %{libname}
 %{_libdir}/%{name}/libsushi-%{api}.so
+%{_libdir}/sushi/web-process-extensions/libsushiwebprocessextension.so
 
 %files -n %{girname}
 %{_libdir}/%{name}/girepository-1.0/Sushi-%{gmajor}.typelib
